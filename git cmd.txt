@@ -1,0 +1,97 @@
+echo "# Final-Project" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/mmudassir0/Final-Project.git
+git push -u origin main
+
+…or push an existing repository from the command line
+git remote add origin https://github.com/mmudassir0/Final-Project.git
+git branch -M main
+git push -u origin main
+
+
+-----------------------------------git all commands----------------------------------------
+
+workplace ---->>staging area ------->local repository -------> remote repository
+
+1=> 	git init 				#initilize git
+2=>	git add .				#add files
+3=>	git commit -m "new file added"		#commit your git
+
+Branches
+4=>	git branch				#check all your branches
+5=>	git branch branch-name			#create new branch
+6=>	git switch branch-name			#switch to new branch or use -c option to create and switch
+7=>	git checkout branch-name		#it will create and switch to new branch
+8=>	git -d/D branch-name			#delete branch
+9=>	git -m branch-name			#rename current branch
+10=>	git merge branch-name			#merge branch first switch to branch of destination like master
+
+10=>	git status				
+11=>	git log	--oneline			#see previous log or commits
+12=>	git commit --amend			if you forget to add file use this after add file
+13=>	git diff				see diff in unstaged/ before staged (before add and commits)
+	git diff HEAD				to see every changes staged and unstaged
+	git diff --staged			to see diff after add and commit only. options(--staged, --cached => both are same check stage change over last commit)
+	git diff --staged [file name]		check diff in specific file
+	git diff branch..branch2		see diff in two branches
+	git diff commit1..commit2
+git stashed 		=> when you change in file then you change a branch without staging/adding changes will go with switch branch
+14=>	git stash save				#if file change with two diff brances then it will be conflict we can't switch then we use stash to save without commit
+	git stash pop				#to remove stash we use pop
+	git stash apply
+	git stash list				for multiple stash/stash on stash and see all stash
+	git stash drop				remove all stash
+	git stash clear
+undo and time traveling
+	git checkout [hash name complete or 	it will go back what you have change before so it detached head(we change HEAD to that commit)
+		first 7 digit of commit using git log ]
+	git checkout HEAD~1			this will go one commit before HEAD
+	git switch -				this will take you to last branch where are in
+	git checkout HEAD [filename]		discard change to specific file and go back where you last change
+OR	git checkout -- [filename]
+OR	git restore [filename]			these all are same command to go back to specific file last change discard
+OR	git restore --source HEAAD~2 [filename]	go 2 commit back
+	git restore --staged [filename]		restore staged file to unstaged (git add file)
+	git reset [commit hash]			if we don't want to commit in master branch and commit to other branch then reset it and commit again
+	git reset --hard [commit hash]		all commit gone forever and not save (undo last commit)
+	git revert [commit hash]		revert will do create new commit and undo from last commit and changes will gone
+
+	git clone url
+git Rebasing
+						it is an alternative of merging
+	git rebase master	
+
+
+
+git push origin master/branch-name
+git remote set-url origin "URL"
+git config --global useremail "email"
+git config --global username "name"
+create .gitignore file to ignore
+
+
+-----------------------------------------------------------------------------------------------------------
+				github
+
+git push remote branch			git push origin main/master
+git fetch remote branch==> git checkout remote branch
+git pull remote branch
+
+git fork
+
+rebasing ===> it is an alternative of merge
+git rebase master
+
+
+
+
+
+
+
+
+
+
+
